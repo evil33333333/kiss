@@ -94,7 +94,7 @@ func claimRequest(sessionid string, username string) {
 		client := &fasthttp.Client{}
 		req := fasthttp.AcquireRequest()
 		resp := fasthttp.AcquireResponse()
-		req.SetRequestURI("https://g.instagram.com/api/v1/accounts/set_username/")
+		req.SetRequestURI("https://i.instagram.com/api/v1/accounts/set_username/")
 		req.Header.Add("cookie", fmt.Sprintf("sessionid=%s", sessionid))
 		req.Header.SetMethod("POST")
 		req.Header.Add("content-type", "application/x-www-form-urlencoded")
